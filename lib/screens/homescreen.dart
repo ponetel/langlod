@@ -32,6 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
+      body: ListView(children: [
+        TextField(
+          decoration: InputDecoration(
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30.0))),
+        )
+      ]),
     );
   }
 }
