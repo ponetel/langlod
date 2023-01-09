@@ -1,5 +1,5 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:langlod/screens/homescreen.dart';
 
@@ -35,15 +35,39 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.red),
       //ໜ້າ logo ເວລາເປິດແອບ
       home: AnimatedSplashScreen(
-        splash: Image.asset('assets/image/langlod.png'),
-        splashIconSize: 300,
-        //nextScreen: LogIn(),
+        //splash: Image.asset('assets/image/langlod.png'),
+        splash: Image.asset('assets/image/carwash.png'),
+        splashIconSize: 250,
+        //   //nextScreen: LogIn(),
         nextScreen: const HomeScreen(),
-        //nextScreen: HomeScreen(),/
-        //nextScreen: CuperButton(),
+        //nextScreen: HomeScreen(),
+        //   //nextScreen: CuperButton(),
         splashTransition: SplashTransition.scaleTransition,
       ),
       //home: const HomeScreen(),
     );
   }
 }
+
+// class SplashScreeen extends StatelessWidget {
+//   const SplashScreeen({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return AnimatedSplashScreen(
+//       splash: Column(
+//         children: [
+//           Image.asset('assets/image/langlod.png'),
+//           const Text(
+//             'Langlod',
+//             style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+//           )
+//         ],
+//       ),
+//       backgroundColor: Colors.red,
+//       nextScreen: const HomeScreen(),
+//       duration: 400,
+//       splashTransition: SplashTransition.slideTransition,
+//     );
+//   }
+// }
