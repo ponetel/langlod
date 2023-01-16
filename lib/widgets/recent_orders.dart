@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+//import 'package:flutter/src/widgets/container.dart';
+//import 'package:flutter/src/widgets/framework.dart';
 import 'package:langlod/models/order.dart';
 import '../data/data.dart';
 
@@ -119,6 +119,7 @@ class RecentOrders extends StatelessWidget {
           height: 120.0,
           //color: Colors.blue,
           child: ListView.builder(
+            physics: BouncingScrollPhysics(),
             padding: EdgeInsets.only(left: 10.0),
             scrollDirection: Axis.horizontal,
             itemCount: currentUser.orders.length,

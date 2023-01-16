@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:langlod/screens/homescreen.dart';
+import 'package:langlod/screens/home_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -48,26 +48,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// class SplashScreeen extends StatelessWidget {
-//   const SplashScreeen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return AnimatedSplashScreen(
-//       splash: Column(
-//         children: [
-//           Image.asset('assets/image/langlod.png'),
-//           const Text(
-//             'Langlod',
-//             style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-//           )
-//         ],
-//       ),
-//       backgroundColor: Colors.red,
-//       nextScreen: const HomeScreen(),
-//       duration: 400,
-//       splashTransition: SplashTransition.slideTransition,
-//     );
-//   }
-// }
