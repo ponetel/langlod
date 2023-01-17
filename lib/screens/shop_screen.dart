@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:langlod/screens/cart_screen.dart';
+import '../data/data.dart';
+import '../models/rating_stars.dart';
 import '../models/shops.dart';
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
@@ -52,6 +55,7 @@ class _ShopScreenState extends State<ShopScreen> {
         Padding(
           padding: EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -69,8 +73,53 @@ class _ShopScreenState extends State<ShopScreen> {
                         fontWeight: FontWeight.w600,
                       )),
                 ],
-              )
+              ),
+              RatingStars(widget.shops.rating),
+              // SizedBox(
+              //   height: 6.0,
+              // ),
+              Text(
+                widget.shops.address,
+                style: TextStyle(
+                  fontSize: 16.0,
+                ),
+              ),
             ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20.0, 0.0, 15.0, 0.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'ປະເພດລົດ',
+                style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
+              ),
+              TextButton(
+                  // onPressed: () {},
+                  child: Text(
+                    'ກະຕ່າ(${currentUser.cart.length})',
+                    style:
+                        TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
+                  ),
+                  onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => CartScreen(),
+                        ),
+                      )),
+            ],
+          ),
+        ),
+        SizedBox(height: 10.0),
+        Center(
+          child: Text(
+            'Menu',
+            style: TextStyle(
+              fontSize: 22.0,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         )
       ]),
