@@ -1,4 +1,4 @@
-import 'dart:html';
+//import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:langlod/models/cartype.dart';
@@ -104,6 +104,7 @@ class _OrderDetailsState extends State<OrderDetails> {
 
             // ປຸ່ມກົດ confirm and Cancel
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),

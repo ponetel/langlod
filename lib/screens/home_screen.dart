@@ -28,11 +28,19 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           decoration: BoxDecoration(
-            //boxShadow: const BoxShadow(color: Colors.black, blurRadius: 20.0,),
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(15.0),
-            border: Border.all(width: 0.0, color: Colors.grey),
-          ),
+              //boxShadow: const BoxShadow(color: Colors.black, blurRadius: 20.0,),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20.0),
+              //border: Border.all(width: 0.0, color: Colors.grey),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  //color: Colors.white,
+                  spreadRadius: 4,
+                  blurRadius: 7,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ]),
           child: Row(
             children: [
               ClipRRect(

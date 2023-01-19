@@ -32,8 +32,7 @@ class _ShopScreenState extends State<ShopScreen> {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(menuItem.imageUrl),
-
-                //fit: BoxFit.cover,
+                fit: BoxFit.cover,
               ),
               borderRadius: BorderRadius.circular(15.0),
               border: Border.all(
